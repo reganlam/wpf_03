@@ -1,0 +1,15 @@
+C:\Users\Regan\source\repos\treeView\bin\Debug\treeView.exe.config
+C:\Users\Regan\source\repos\treeView\bin\Debug\treeView.exe
+C:\Users\Regan\source\repos\treeView\bin\Debug\treeView.pdb
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csprojAssemblyReference.cache
+C:\Users\Regan\source\repos\treeView\obj\Debug\MainWindow.g.cs
+C:\Users\Regan\source\repos\treeView\obj\Debug\App.g.cs
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView_MarkupCompile.cache
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView_MarkupCompile.lref
+C:\Users\Regan\source\repos\treeView\obj\Debug\MainWindow.baml
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.g.resources
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.Properties.Resources.resources
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csproj.GenerateResource.cache
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csproj.CoreCompileInputs.cache
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.exe
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.pdb
