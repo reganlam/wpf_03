@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:treeView"
         mc:Ignorable="d"
-        Loaded="Window_Loaded"
         Title="MainWindow" Height="600" Width="400">
     <ScrollViewer>
         <StackPanel>
@@ -15,7 +14,9 @@
                 <Image Width="20" Margin="3" Source="Images/drive.png"/>
                 <TextBlock VerticalAlignment="Center" Text="Some Folder" />
             </StackPanel>-->
-        
+
+            <Button Content="{Binding Test}"/>
+
             <TreeView x:Name="FolderView">
                 <TreeView.Resources>
                     <!--

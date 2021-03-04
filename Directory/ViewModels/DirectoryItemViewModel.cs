@@ -1,0 +1,6 @@
+﻿namespace treeView
+{
+    class DirectoryItemViewModel
+    {
+    }
+}

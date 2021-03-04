@@ -13,3 +13,4 @@ C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csproj.GenerateResource.
 C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csproj.CoreCompileInputs.cache
 C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.exe
 C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.pdb
+C:\Users\Regan\source\repos\treeView\obj\Debug\treeView.csproj.Fody.CopyLocal.cache

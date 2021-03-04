@@ -25,106 +25,107 @@ namespace treeView
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new Class1();
         }
         #endregion
 
-        #region On Loaded
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Get every logical drive
-            foreach (var drive in System.IO.Directory.GetLogicalDrives())
-            {
-                var item = new TreeViewItem()
-                {
-                    Header = drive,     // Header = File name
-                    Tag = drive         // Tag = Full path
-                };
+        //#region On Loaded
+        //private void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    // Get every logical drive
+        //    foreach (var drive in System.IO.Directory.GetLogicalDrives())
+        //    {
+        //        var item = new TreeViewItem()
+        //        {
+        //            Header = drive,     // Header = File name
+        //            Tag = drive         // Tag = Full path
+        //        };
 
-                //item.Header = drive;
-                //item.Tag = drive;
+        //        //item.Header = drive;
+        //        //item.Tag = drive;
 
-                item.Items.Add(null);
+        //        item.Items.Add(null);
 
-                item.Expanded += Folder_Expanded;
-                FolderView.Items.Add(item);
-            }
-        }
-        #endregion
+        //        item.Expanded += Folder_Expanded;
+        //        FolderView.Items.Add(item);
+        //    }
+        //}
+        //#endregion
 
-        #region Folder Expanded
-        private void Folder_Expanded(object sender, RoutedEventArgs e)
-        {
-            var item = (TreeViewItem)sender;
+        //#region Folder Expanded
+        //private void Folder_Expanded(object sender, RoutedEventArgs e)
+        //{
+        //    var item = (TreeViewItem)sender;
 
-            // If does not contain dummy data means we have already iterated
-            if (item.Items.Count != 1 || item.Items[0] != null) return;
+        //    // If does not contain dummy data means we have already iterated
+        //    if (item.Items.Count != 1 || item.Items[0] != null) return;
 
-            item.Items.Clear();
+        //    item.Items.Clear();
 
-            var fullPath = (string)item.Tag;
+        //    var fullPath = (string)item.Tag;
 
 
-            #region Get directories
-            // Get directories within item
-            var directories = new List<String>();
+        //    #region Get directories
+        //    // Get directories within item
+        //    var directories = new List<String>();
 
-            try
-            {
-                // Get each folder in directory
-                var dirs = System.IO.Directory.GetDirectories(fullPath);
+        //    try
+        //    {
+        //        // Get each folder in directory
+        //        var dirs = System.IO.Directory.GetDirectories(fullPath);
 
-                 directories.AddRange(dirs);
-            }
-            catch
-            {
+        //         directories.AddRange(dirs);
+        //    }
+        //    catch
+        //    {
 
-            }
+        //    }
 
-            directories.ForEach(directoryPath =>
-            {
-                var subItem = new TreeViewItem()
-                {
-                    Header = System.IO.Path.GetFileName(directoryPath),
-                    Tag = directoryPath
-                };
+        //    directories.ForEach(directoryPath =>
+        //    {
+        //        var subItem = new TreeViewItem()
+        //        {
+        //            Header = System.IO.Path.GetFileName(directoryPath),
+        //            Tag = directoryPath
+        //        };
 
-                // Add dummy item for expand
-                subItem.Items.Add(null);
+        //        // Add dummy item for expand
+        //        subItem.Items.Add(null);
 
-                subItem.Expanded += Folder_Expanded;
+        //        subItem.Expanded += Folder_Expanded;
 
-                item.Items.Add(subItem);
-            });
-            #endregion
+        //        item.Items.Add(subItem);
+        //    });
+        //#endregion
 
-            #region Get files
-            // Get files within item
-            var files = new List<String>();
+        //    #region Get files
+        //    // Get files within item
+        //    var files = new List<String>();
 
-            try
-            {
-                // Get each file in directory
-                var fs = System.IO.Directory.GetFiles(fullPath);
+        //    try
+        //    {
+        //        // Get each file in directory
+        //        var fs = System.IO.Directory.GetFiles(fullPath);
 
-                files.AddRange(fs);
-            }
-            catch
-            {
+        //        files.AddRange(fs);
+        //    }
+        //    catch
+        //    {
 
-            }
+        //    }
 
-            files.ForEach(directoryPath =>
-            {
-                var subItem = new TreeViewItem()
-                {
-                    Header = System.IO.Path.GetFileName(directoryPath),
-                    Tag = directoryPath
-                };
+        //    files.ForEach(directoryPath =>
+        //    {
+        //        var subItem = new TreeViewItem()
+        //        {
+        //            Header = System.IO.Path.GetFileName(directoryPath),
+        //            Tag = directoryPath
+        //        };
 
-                item.Items.Add(subItem);
-            });
-            #endregion
-        }
-        #endregion
+        //        item.Items.Add(subItem);
+        //    });
+        //    #endregion
+        //}
+        //#endregion
     }
 }
